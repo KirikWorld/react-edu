@@ -1,21 +1,81 @@
-*{
-  box-sizing: border-box;
+* {
+    box-sizing: border-box;
 }
 
 html {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  background: rgb(247, 232, 232);
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(247, 232, 232);
+}
+
+#root {
+    height: 100%;
+    width: 100%;
+}
+
+.App {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 35px;
+}
+
+.workSpace {
+    color: white;
+    margin-top: 30px;
+    background: rgb(70, 66, 66);
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.workSpace h1 {
+    /* margin-left: 5px; */
+    text-align: center;
+}
+
+.workSpace p {
+    margin-left: 10px;
+}
+
+.tasks-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.721);
+}
+
+.tasks-container .close{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 40px;
+  height: auto;
 }
