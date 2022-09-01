@@ -60,6 +60,7 @@ html,
 body {
     height: 100%;
     margin: 0;
+    overflow: hidden;
 }
 
 body {
@@ -67,6 +68,7 @@ body {
     background-color: #eee;
     display: flex;
     font: 16px/1.05 "Montserrat", sans-serif;
+
 }
 
 #root {
@@ -86,4 +88,39 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: init 2s ease-in-out;
+}
+
+.body__pika__out {
+    height: 100vh;
+    width: 100vw;
+    background: #ffe3ec;
+    font-family: "Pangolin", cursive;
+    font-size: 1vmin;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    justify-content: center;
+    animation: out-r 2s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes out-r {
+    0% {
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(1000px);
+    }
+}
+
+@keyframes init {
+    0% {
+        transform: translateY(-1000px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
 }
